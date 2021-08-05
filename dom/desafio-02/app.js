@@ -10,5 +10,8 @@ new Vue({
         pegarValor(valor) {
             this.valor = valor
         },
+        // pegarValor(event) {
+        //     this.valor = event.target.value
+        // },
     }
 })
