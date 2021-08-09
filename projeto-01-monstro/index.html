@@ -49,7 +49,9 @@
         <div v-if="logs.length"
             class="panel logs">
             <ul>
-                <li></li>
+                <li v-for="log in logs"
+                    :class="log.cls"
+                    class="log">{{ log.text }}</li>
             </ul>
         </div>
     </div>
