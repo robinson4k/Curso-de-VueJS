@@ -10,6 +10,15 @@
         <h1>{{ cor }}</h1>
         <p>{{ i }}</p>
     </template>
+    <hr>
+    <ul>
+        <li v-for="pessoa in pessoas">
+            <!-- {{ pessoa.nome }} -->
+            <div v-for="(valor, chave, indice) in pessoa">
+                {{ indice }} - {{ chave }} = {{ valor }}
+            </div>
+        </li>
+    </ul>
 </div>
 
 <script>
