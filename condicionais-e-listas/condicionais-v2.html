@@ -3,8 +3,10 @@
 
 <div id="app">
     <p v-if="logado">Usuário logado: {{ nome }}</p>
+    <p v-else-if="anonimo">Navegando como Anônimo</p>
     <p v-else>Nenhum usuário logado</p>
     <button @click="logado = !logado">{{ logado ? 'Sair' : 'Entrar' }}</button>
+    <input type="checkbox" v-model="anonimo">
 </div>
 
 <script>
@@ -12,7 +14,8 @@
         el: '#app',
         data: {
             nome: 'Maria',
-            logado: false
+            logado: false,
+            anonimo: false
         }
     })
 </script>
